@@ -7,7 +7,10 @@ exports.up = function(knex) {
        .notNullable()
        .unique();
 
-    
+    tbl.integer('cohortID')
+       .references('ID')
+       .inTable('cohorts')
+
   })
 };
 //undo changes
